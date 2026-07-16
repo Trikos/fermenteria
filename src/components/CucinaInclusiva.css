@@ -48,17 +48,9 @@
 }
 
 .cucina__features img {
-  width: 88px;
-  height: 88px;
+  width: 116px;
+  height: 116px;
   object-fit: contain;
-}
-
-.cucina__features span {
-  font-weight: 700;
-  font-size: 0.85rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--color-dark-soft);
 }
 
 @media (min-width: 860px) {

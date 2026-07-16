@@ -66,6 +66,26 @@ Una review con 4 agenti paralleli (accessibilità, responsive, qualità React, f
 
 Prima di modificare `Header.jsx`, `CookieConsent.jsx` o gli stili di focus, tieni presente questi vincoli.
 
+### 6. Badge icone senza sottotitolo — non aggiungere testo HTML visibile
+
+I badge di Contatti (chat/facebook/mail/instagram/dove siamo/orari) e di Cucina Inclusiva (gluten free/veg/bio) sono immagini che contengono già icona + didascalia disegnate al loro interno — sono pensate per essere autosufficienti, come sul sito originale. **Non aggiungere una `<span>` di testo visibile accanto/sotto**: è già stato fatto una volta per accessibilità ed è stato corretto su richiesta esplicita dell'utente. L'alt/nome accessibile va sull'`<img alt="...">` stesso o in un `.visually-hidden`, mai come testo a schermo. Le badge di call-to-action con link esterno (MENU ITALIANO, BREWERY, STAI DOVE FIORISCI in `AnchorSection`/`Hero`) sono diverse: quelle hanno davvero una didascalia separata visibile anche nell'originale, non toccarle.
+
+### 7. SEO/GEO — vincolo strutturale: SPA senza SSR
+
+Il sito è una SPA client-rendered pubblicata su GitHub Pages (hosting statico, nessun server per SSR). Questo significa che crawler che NON eseguono JavaScript (molti bot AI, alcuni motori non-Google) vedono solo lo shell vuoto di `index.html`, non il contenuto renderizzato da React. Mitigazioni già in atto:
+- **JSON-LD strutturato (schema.org `Restaurant`)** scritto direttamente e staticamente in `index.html` (non generato da React), cosi' e' visibile anche senza esecuzione JS. Contiene indirizzo, geo, orari, telefono, social — tenerlo sincronizzato manualmente con `src/data/content.js` se questi dati cambiano.
+- **Meta tag Open Graph/Twitter/canonical** anch'essi statici in `index.html`.
+- **`public/robots.txt`**: allow esplicito ai crawler AI piu' noti (GPTBot, ClaudeBot, PerplexityBot, Google-Extended, CCBot, ecc.) — molti siti li bloccano per errore/default, danneggiando la visibilita' GEO.
+- **`public/sitemap.xml`**: una sola voce "vera" (la home, unica URL fisicamente distinta data la SPA); le due pagine legali sono elencate come URL con `#` a priorita' bassa, utili solo a crawler che li seguono comunque.
+- **`public/llms.txt`**: file GEO emergente (standard proposto 2024, adozione crescente 2025-2026) — riassunto in Markdown del sito per assistenti AI, separato da robots.txt.
+- **`src/hooks/useDocumentMeta.js`**: aggiorna `document.title` e meta description via JS al cambio pagina (Privacy/Cookie) — aiuta Googlebot (esegue JS) e la tab del browser, non aiuta crawler senza JS per quelle 2 sotto-pagine.
+
+**Limite non risolto**: se in futuro serve indicizzazione reale delle sotto-pagine o dei contenuti dinamici per crawler non-JS, l'unica soluzione robusta e' passare a prerendering statico in build (es. Vite + un pass headless che salva l'HTML gia' renderizzato) oppure abbandonare GitHub Pages per un host con SSR. Non e' stato fatto: fuori scope per un sito di una singola pagina scrollabile + 2 pagine legali.
+
+### 8. Immagini — script di ottimizzazione, non ri-scaricare a piena risoluzione
+
+Le immagini in `public/images/` sono state compresse con `scripts/optimize-images.mjs` (usa `sharp`, devDependency): badge/icone PNG ridimensionate a max 320px con palette ottimizzata, foto JPEG ridimensionate a max 2000px qualita' 78 mozjpeg. Risultato: da 5.39MB a 1.07MB totali (-80%), nessuna perdita di qualita' visibile alle dimensioni di rendering reali (badge mostrati a 64-116px, foto a piena larghezza banner). Se si aggiungono nuove immagini in `public/images/`, rilanciare `node scripts/optimize-images.mjs` prima di committarle — le foto originali scaricate dal sito WordPress arrivano spesso a 1-1.4MB l'una, pessimo per Core Web Vitals (LCP) e per il crawl budget dei bot.
+
 ## Deploy
 
 Repo GitHub Pages, branch `gh-pages` (deploy "legacy", non Actions).

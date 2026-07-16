@@ -3,9 +3,94 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="%BASE_URL%images/logo-header.png" />
+    <link rel="apple-touch-icon" href="%BASE_URL%images/logo-header.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Fermenteria - Ristorante Inclusivo con birrificio interno a Bassano del Grappa. Cucina gluten free, vegetariana, ingredienti bio e birre artigianali prodotte in casa." />
-    <title>Fermenteria | Ristorante Inclusivo con birrificio interno</title>
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#e9b940" />
+
+    <title>Fermenteria | Ristorante Inclusivo con Birrificio a Bassano del Grappa</title>
+    <meta
+      name="description"
+      content="Fermenteria: ristorante inclusivo con birrificio artigianale interno a Bassano del Grappa (VI). Cucina gluten free, vegetariana, ingredienti bio e birre prodotte in casa. Via Campo Marzio 43."
+    />
+    <link rel="canonical" href="https://trikos.github.io/fermenteria/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="restaurant" />
+    <meta property="og:site_name" content="Fermenteria" />
+    <meta property="og:title" content="Fermenteria | Ristorante Inclusivo con Birrificio a Bassano del Grappa" />
+    <meta
+      property="og:description"
+      content="Ristorante inclusivo con birrificio artigianale interno a Bassano del Grappa. Cucina gluten free, vegetariana, ingredienti bio e birre prodotte in casa."
+    />
+    <meta property="og:url" content="https://trikos.github.io/fermenteria/" />
+    <meta property="og:image" content="https://trikos.github.io/fermenteria/images/photo-hero.jpg" />
+    <meta property="og:image:width" content="2000" />
+    <meta property="og:locale" content="it_IT" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Fermenteria | Ristorante Inclusivo con Birrificio a Bassano del Grappa" />
+    <meta
+      name="twitter:description"
+      content="Ristorante inclusivo con birrificio artigianale interno a Bassano del Grappa. Cucina gluten free, vegetariana, ingredienti bio e birre prodotte in casa."
+    />
+    <meta name="twitter:image" content="https://trikos.github.io/fermenteria/images/photo-hero.jpg" />
+
+    <!-- Structured data (Restaurant / LocalBusiness) — mantenere sincronizzato con src/data/content.js -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "name": "Fermenteria",
+        "alternateName": "Fermenteria Ristorante & Birrificio",
+        "description": "Ristorante inclusivo con birrificio artigianale interno a Bassano del Grappa. Cucina gluten free, vegetariana, ingredienti bio e birre artigianali prodotte in casa.",
+        "url": "https://trikos.github.io/fermenteria/",
+        "image": "https://trikos.github.io/fermenteria/images/photo-hero.jpg",
+        "telephone": "+393203407673",
+        "email": "fermenteriabassano@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Via Campo Marzio, 43",
+          "addressLocality": "Bassano del Grappa",
+          "addressRegion": "VI",
+          "postalCode": "36061",
+          "addressCountry": "IT"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 45.7648075,
+          "longitude": 11.7325152
+        },
+        "servesCuisine": ["Italiana", "Birra artigianale"],
+        "menu": "https://www.fermenteria.it/wp-content/uploads/2026/07/menu-2026.pdf",
+        "acceptsReservations": "True",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Monday",
+            "opens": "19:00",
+            "closes": "22:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            "opens": "12:00",
+            "closes": "14:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            "opens": "19:00",
+            "closes": "22:00"
+          }
+        ],
+        "sameAs": [
+          "https://www.facebook.com/fermenteria/?locale=it_IT",
+          "https://www.instagram.com/fermenteriabassano"
+        ]
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>

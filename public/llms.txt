@@ -1,0 +1,21 @@
+# Fermenteria
+
+> Ristorante inclusivo con birrificio artigianale interno a Bassano del Grappa (VI), Italia. Cucina gluten free, vegetariana e con ingredienti bio; birre prodotte in casa nell'unico birrificio del centro cittadino.
+
+Fermenteria di Nicola Angelo Antonio Scaramuzzi & C. S.a.s. — Via Campo Marzio, 43, 36061 Bassano del Grappa (VI). Telefono 320 340 7673, email fermenteriabassano@gmail.com.
+
+Orari: lunedì 19–22, martedì-sabato 12–14 e 19–22, domenica chiuso.
+
+## Pagine
+
+- [Home](https://trikos.github.io/fermenteria/): presentazione del ristorante, cucina inclusiva (gluten free, vegetariana, ingredienti bio), birrificio interno, storia dello chef Nicola Scaramuzzi, contatti e orari.
+- [Privacy Policy](https://trikos.github.io/fermenteria/#/privacy-policy): informativa sul trattamento dei dati personali.
+- [Cookie Policy](https://trikos.github.io/fermenteria/#/cookie-policy-ue): informativa sui cookie.
+
+## Risorse
+
+- [Menù (PDF)](https://www.fermenteria.it/wp-content/uploads/2026/07/menu-2026.pdf)
+- [Allergeni (PDF)](https://www.fermenteria.it/wp-content/uploads/2026/07/allergeni.pdf)
+- [Facebook](https://www.facebook.com/fermenteria/?locale=it_IT)
+- [Instagram](https://www.instagram.com/fermenteriabassano)
+- [Prenotazioni WhatsApp](http://wa.me/message/O6EGOK5IFLQ3N1)

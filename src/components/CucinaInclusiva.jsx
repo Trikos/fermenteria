@@ -23,8 +23,7 @@ function CucinaInclusiva() {
         <ul className="cucina__features">
           {FEATURES.map((f) => (
             <li key={f.label}>
-              <img src={f.src} alt="" loading="lazy" />
-              <span>{f.label}</span>
+              <img src={f.src} alt={f.label} loading="lazy" />
             </li>
           ))}
         </ul>

@@ -1,0 +1,38 @@
+# Fermenteria — www.trikos.github.io/fermenteria
+# Tutti i crawler sono benvenuti, inclusi i crawler AI per la generative engine optimization.
+
+User-agent: *
+Allow: /
+
+# Crawler AI espliciti (GEO) — nessun blocco, visibilità voluta anche su risposte generate da assistenti AI
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+Sitemap: https://trikos.github.io/fermenteria/sitemap.xml
