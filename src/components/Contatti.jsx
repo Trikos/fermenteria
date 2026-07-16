@@ -47,8 +47,8 @@ function Contatti() {
 
         <div className="contatti__info">
           <p>{SITE.address}</p>
-          <p>
-            <a href={`tel:+39${SITE.phone}`}>{SITE.phoneDisplay}</a> ·{' '}
+          <p className="contatti__info-links">
+            <a href={`tel:+39${SITE.phone}`}>{SITE.phoneDisplay}</a>
             <a href={`mailto:${SITE.email}`}>{SITE.email}</a>
           </p>
         </div>

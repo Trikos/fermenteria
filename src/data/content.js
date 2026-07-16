@@ -11,7 +11,7 @@ export const SITE = {
   whatsapp: 'http://wa.me/message/O6EGOK5IFLQ3N1',
   facebook: 'https://www.facebook.com/fermenteria/?locale=it_IT',
   instagram: 'https://www.instagram.com/fermenteriabassano',
-  maps: 'https://www.google.com/maps/place/Fermenteria/@45.7648075,11.7325152',
+  maps: 'https://www.google.com/maps/place/Fermenteria/@45.7648112,11.7299403,533m/data=!3m3!1e3!4b1!5s0x4778da845148f1bd:0xec5e5d58a2426826!4m6!3m5!1s0x4778da84512a1415:0xdc63eb080613389a!8m2!3d45.7648075!4d11.7325152!16s%2Fg%2F11df81gbl4?entry=ttu&g_ep=EgoyMDI2MDYyMS4wIKXMDSoASAFQAw%3D%3D',
   menuPdf: 'https://www.fermenteria.it/wp-content/uploads/2026/07/menu-2026.pdf',
   allergeniPdf: 'https://www.fermenteria.it/wp-content/uploads/2026/07/allergeni.pdf',
   amazonBook: 'https://www.amazon.it/fiorisci-Nicola-Angelo-Antonio-Scaramuzzi/dp/B0H41MHBLT/',
