@@ -9,7 +9,6 @@ function AnchorSection({
   badgeSrc,
   badgeAlt,
   badgeHref,
-  badgeLabel,
   children,
 }) {
   return (
@@ -29,7 +28,6 @@ function AnchorSection({
               rel="noreferrer"
             >
               <img src={badgeSrc} alt={badgeAlt} loading="lazy" />
-              <span>{badgeLabel}</span>
             </a>
           )}
           {children}

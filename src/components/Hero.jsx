@@ -43,7 +43,6 @@ function Hero() {
       <div id="menu" className="hero__menu-band">
         <a className="anchor-section__badge" href={SITE.menuPdf} target="_blank" rel="noreferrer">
           <img src={asset('images/badge-menu-italiano.png')} alt="Menù italiano" loading="lazy" />
-          <span>Menù italiano</span>
         </a>
         <a className="anchor-section__extra" href={SITE.allergeniPdf} target="_blank" rel="noreferrer">
           Allergeni

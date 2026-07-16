@@ -61,16 +61,9 @@
 }
 
 .anchor-section__badge img {
-  width: 92px;
-  height: 92px;
+  width: 116px;
+  height: 116px;
   object-fit: contain;
-}
-
-.anchor-section__badge span {
-  font-weight: 700;
-  font-size: 0.85rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
 }
 
 .anchor-section__extra {

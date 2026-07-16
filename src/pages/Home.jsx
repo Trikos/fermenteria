@@ -37,7 +37,6 @@ function Home() {
         badgeSrc={asset('images/badge-brewery.png')}
         badgeAlt="Brewery"
         badgeHref={SITE.birraArticle}
-        badgeLabel="Brewery"
       />
 
       <AnchorSection
@@ -49,7 +48,6 @@ function Home() {
         badgeSrc={asset('images/badge-stai-dove-fiorisci.png')}
         badgeAlt="Stai dove fiorisci"
         badgeHref={SITE.amazonBook}
-        badgeLabel="Stai dove fiorisci"
       />
 
       <Gallery />

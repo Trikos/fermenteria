@@ -20,10 +20,14 @@
 .contatti__links {
   margin-top: var(--space-5);
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-3) var(--space-1);
-  max-width: 460px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4) var(--space-2);
+  max-width: 420px;
   margin-inline: auto;
+}
+
+.contatti__links-full {
+  grid-column: 1 / -1;
 }
 
 .contatti__links a,
@@ -33,37 +37,29 @@
   align-items: center;
   gap: 0.5rem;
   color: var(--color-dark-soft);
+  transition: transform 0.2s ease;
 }
 
-.contatti__icon {
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.35);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.2s ease, background 0.2s ease;
-}
-
-.contatti__links a:hover .contatti__icon {
+.contatti__links a:hover {
   transform: translateY(-3px);
-  background: var(--color-white);
 }
 
-.contatti__icon img {
-  width: 42px;
-  height: 42px;
+.contatti__links img,
+.contatti__orari > img {
+  width: 108px;
+  height: 108px;
   object-fit: contain;
+}
+
+.contatti__orari {
+  align-items: center;
 }
 
 .contatti__orari ul {
   margin-top: 0.2rem;
   width: 100%;
   font-weight: 400;
-  text-transform: none;
-  letter-spacing: normal;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -93,17 +89,13 @@
 
 @media (min-width: 640px) {
   .contatti__links {
-    max-width: 640px;
-    gap: var(--space-4) var(--space-2);
+    max-width: 520px;
+    gap: var(--space-5) var(--space-4);
   }
 
-  .contatti__icon {
-    width: 84px;
-    height: 84px;
-  }
-
-  .contatti__icon img {
-    width: 56px;
-    height: 56px;
+  .contatti__links img,
+  .contatti__orari > img {
+    width: 130px;
+    height: 130px;
   }
 }
