@@ -5,7 +5,7 @@ import './Contatti.css';
 const LINKS = [
   { icon: asset('images/icon-chat.png'), label: 'Chat WhatsApp', href: SITE.whatsapp, external: true },
   { icon: asset('images/icon-facebook.png'), label: 'Facebook', href: SITE.facebook, external: true },
-  { icon: asset('images/icon-mail.png'), label: 'Scrivici', href: `mailto:${SITE.email}`, external: false },
+  { icon: asset('images/icon-mail.png'), label: 'Scrivici via email', href: `mailto:${SITE.email}`, external: false },
   { icon: asset('images/icon-instagram.png'), label: 'Instagram', href: SITE.instagram, external: true },
   { icon: asset('images/icon-dove-siamo.png'), label: 'Dove siamo', href: SITE.maps, external: true },
 ];
@@ -22,18 +22,17 @@ function Contatti() {
             <li key={l.label}>
               <a href={l.href} target={l.external ? '_blank' : undefined} rel={l.external ? 'noreferrer' : undefined}>
                 <span className="contatti__icon">
-                  <img src={l.icon} alt="" loading="lazy" />
+                  <img src={l.icon} alt={l.label} loading="lazy" />
                 </span>
-                {l.label}
+                <span className="visually-hidden">{l.label}</span>
               </a>
             </li>
           ))}
           <li>
             <div className="contatti__orari">
               <span className="contatti__icon">
-                <img src={asset('images/icon-orari.png')} alt="" loading="lazy" />
+                <img src={asset('images/icon-orari.png')} alt="Orari di apertura" loading="lazy" />
               </span>
-              Orari
               <ul>
                 {ORARI.map((o) => (
                   <li key={o.giorni}>
