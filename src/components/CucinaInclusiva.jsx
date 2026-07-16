@@ -1,9 +1,10 @@
+import { asset } from '../utils/asset';
 import './CucinaInclusiva.css';
 
 const FEATURES = [
-  { src: '/images/badge-gluten-free.png', label: 'Gluten free' },
-  { src: '/images/badge-veg.png', label: 'Veg' },
-  { src: '/images/badge-bio.png', label: 'Ingredienti bio' },
+  { src: asset('images/badge-gluten-free.png'), label: 'Gluten free' },
+  { src: asset('images/badge-veg.png'), label: 'Veg' },
+  { src: asset('images/badge-bio.png'), label: 'Ingredienti bio' },
 ];
 
 function CucinaInclusiva() {
@@ -11,7 +12,7 @@ function CucinaInclusiva() {
     <section id="cucina-inclusiva" className="cucina">
       <div className="cucina__photo">
         <img
-          src="/images/photo-tartare.jpg"
+          src={asset('images/photo-tartare.jpg')}
           alt="Tartare di carne con uovo in camicia, un piatto della cucina inclusiva di Fermenteria"
           loading="lazy"
         />

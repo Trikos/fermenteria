@@ -111,7 +111,7 @@
   50% { transform: translateX(-50%) translateY(8px); }
 }
 
-@media (min-width: 960px) {
+@media (min-width: 860px) {
   .hero__content {
     padding-bottom: var(--space-6);
   }
@@ -126,7 +126,7 @@
   text-align: center;
 }
 
-@media (min-width: 720px) {
+@media (min-width: 860px) {
   .hero__menu-band {
     padding-block: var(--space-6);
   }

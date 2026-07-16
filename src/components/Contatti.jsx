@@ -1,12 +1,13 @@
 import { ORARI, SITE } from '../data/content';
+import { asset } from '../utils/asset';
 import './Contatti.css';
 
 const LINKS = [
-  { icon: '/images/icon-chat.png', label: 'Chat WhatsApp', href: SITE.whatsapp, external: true },
-  { icon: '/images/icon-facebook.png', label: 'Facebook', href: SITE.facebook, external: true },
-  { icon: '/images/icon-mail.png', label: 'Scrivici', href: `mailto:${SITE.email}`, external: false },
-  { icon: '/images/icon-instagram.png', label: 'Instagram', href: SITE.instagram, external: true },
-  { icon: '/images/icon-dove-siamo.png', label: 'Dove siamo', href: SITE.maps, external: true },
+  { icon: asset('images/icon-chat.png'), label: 'Chat WhatsApp', href: SITE.whatsapp, external: true },
+  { icon: asset('images/icon-facebook.png'), label: 'Facebook', href: SITE.facebook, external: true },
+  { icon: asset('images/icon-mail.png'), label: 'Scrivici', href: `mailto:${SITE.email}`, external: false },
+  { icon: asset('images/icon-instagram.png'), label: 'Instagram', href: SITE.instagram, external: true },
+  { icon: asset('images/icon-dove-siamo.png'), label: 'Dove siamo', href: SITE.maps, external: true },
 ];
 
 function Contatti() {
@@ -30,7 +31,7 @@ function Contatti() {
           <li>
             <div className="contatti__orari">
               <span className="contatti__icon">
-                <img src="/images/icon-orari.png" alt="" loading="lazy" />
+                <img src={asset('images/icon-orari.png')} alt="" loading="lazy" />
               </span>
               Orari
               <ul>

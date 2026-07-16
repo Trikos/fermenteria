@@ -22,7 +22,7 @@
 .cucina__content h2 {
   font-size: clamp(1.5rem, 5vw, 2.1rem);
   font-weight: 700;
-  color: var(--color-white);
+  color: var(--color-dark);
 }
 
 .cucina__content > p {
@@ -61,7 +61,7 @@
   color: var(--color-dark-soft);
 }
 
-@media (min-width: 720px) {
+@media (min-width: 860px) {
   .cucina__photo {
     aspect-ratio: 21 / 9;
   }

@@ -90,7 +90,7 @@
   text-decoration: underline;
 }
 
-@media (min-width: 720px) {
+@media (min-width: 860px) {
   .contatti__links {
     grid-template-columns: repeat(3, 1fr);
     max-width: 640px;

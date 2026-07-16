@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './CookieConsent.css';
 
@@ -23,6 +23,7 @@ function CookieConsent() {
   const [visible, setVisible] = useState(false);
   const [showPrefs, setShowPrefs] = useState(false);
   const [prefs, setPrefs] = useState(DEFAULT_PREFS);
+  const panelRef = useRef(null);
 
   useEffect(() => {
     const stored = readStoredConsent();
@@ -30,8 +31,16 @@ function CookieConsent() {
     else setPrefs(stored);
   }, []);
 
+  useEffect(() => {
+    if (visible) panelRef.current?.focus();
+  }, [visible]);
+
   const save = (next) => {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(next));
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(next));
+    } catch {
+      // storage unavailable (private browsing, quota, blocked) — still honor the user's choice for this session
+    }
     setPrefs(next);
     setVisible(false);
     setShowPrefs(false);
@@ -45,7 +54,7 @@ function CookieConsent() {
 
   return (
     <div className="cookie-consent" role="dialog" aria-modal="true" aria-label="Gestione consenso cookie">
-      <div className="cookie-consent__panel">
+      <div className="cookie-consent__panel" ref={panelRef} tabIndex={-1}>
         {!showPrefs ? (
           <>
             <p>

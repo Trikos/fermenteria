@@ -8,7 +8,7 @@
   object-fit: cover;
 }
 
-@media (min-width: 720px) {
+@media (min-width: 860px) {
   .gallery__photo {
     aspect-ratio: 21 / 9;
   }

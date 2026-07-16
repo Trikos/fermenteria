@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { SITE } from '../data/content';
+import { asset } from '../utils/asset';
 import './Footer.css';
 
 function Footer() {
@@ -16,7 +17,7 @@ function Footer() {
           <Link to="/cookie-policy-ue">Cookie Policy</Link>
         </nav>
         <a href={SITE.aic} target="_blank" rel="noreferrer" className="site-footer__aic">
-          <img src="/images/logo-aic.png" alt="AIC Veneto - Associazione Italiana Celiachia" width="64" height="64" loading="lazy" />
+          <img src={asset('images/logo-aic.png')} alt="AIC Veneto - Associazione Italiana Celiachia" width="64" height="64" loading="lazy" />
         </a>
       </div>
     </footer>

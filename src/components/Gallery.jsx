@@ -1,3 +1,4 @@
+import { asset } from '../utils/asset';
 import './Gallery.css';
 
 function Gallery() {
@@ -5,7 +6,7 @@ function Gallery() {
     <section className="gallery" aria-label="Il locale">
       <img
         className="gallery__photo"
-        src="/images/photo-interno-sala.jpg"
+        src={asset('images/photo-interno-sala.jpg')}
         alt="Interno del locale Fermenteria con mensole in legno, libri, piante, quadri e tavoli in legno massello"
         loading="lazy"
       />
