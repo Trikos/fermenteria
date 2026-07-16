@@ -1,0 +1,102 @@
+.contatti {
+  background: var(--color-yellow);
+  padding: var(--space-6) 0;
+  text-align: center;
+}
+
+.contatti h2 {
+  font-size: clamp(1.5rem, 5vw, 2.1rem);
+  font-weight: 700;
+  color: var(--color-dark-soft);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.contatti__lead {
+  margin-top: var(--space-1);
+  color: var(--color-dark-soft);
+}
+
+.contatti__links {
+  margin-top: var(--space-5);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4) var(--space-2);
+  max-width: 460px;
+  margin-inline: auto;
+}
+
+.contatti__links > li:last-child {
+  grid-column: 1 / -1;
+}
+
+.contatti__links a,
+.contatti__orari {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-dark-soft);
+}
+
+.contatti__icon {
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.contatti__links a:hover .contatti__icon {
+  transform: translateY(-3px);
+  background: var(--color-white);
+}
+
+.contatti__icon img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.contatti__orari ul {
+  margin-top: 0.2rem;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: normal;
+  font-size: 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.contatti__info {
+  margin-top: var(--space-5);
+  color: var(--color-dark-soft);
+  font-size: 0.95rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.contatti__info a {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+@media (min-width: 720px) {
+  .contatti__links {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 640px;
+  }
+
+  .contatti__links > li:last-child {
+    grid-column: auto;
+  }
+}

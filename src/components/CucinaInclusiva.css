@@ -1,0 +1,78 @@
+.cucina {
+  background: var(--color-yellow);
+}
+
+.cucina__photo {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.cucina__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cucina__content {
+  padding: var(--space-5) var(--space-3);
+  text-align: center;
+}
+
+.cucina__content h2 {
+  font-size: clamp(1.5rem, 5vw, 2.1rem);
+  font-weight: 700;
+  color: var(--color-white);
+}
+
+.cucina__content > p {
+  margin-top: var(--space-2);
+  font-style: italic;
+  font-size: clamp(1rem, 3vw, 1.15rem);
+  color: var(--color-dark-soft);
+}
+
+.cucina__features {
+  margin-top: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.cucina__features li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.cucina__features img {
+  width: 88px;
+  height: 88px;
+  object-fit: contain;
+}
+
+.cucina__features span {
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-dark-soft);
+}
+
+@media (min-width: 720px) {
+  .cucina__photo {
+    aspect-ratio: 21 / 9;
+  }
+
+  .cucina__content {
+    padding-block: var(--space-6);
+  }
+
+  .cucina__features {
+    flex-direction: row;
+    justify-content: center;
+    gap: var(--space-5);
+  }
+}
